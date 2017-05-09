@@ -436,15 +436,13 @@ namespace MteEval
 
                     // Save token
                     MteToken saveToken = new MteToken(token.type, String.Copy(token.text));
-                    //saveToken.text = String.Copy(token.text);
-                    //saveToken.type = token.type;
 
                     // Assignment operator?
                     GetToken();
                     if (token.text.Equals("="))
                     {
                         // If compiling iif() and attempting assignment in conditional
-                        if ( iifCount > 0 && codeBlock.AllowConditionalAssignment )
+                        if ( iifCount > 0 && codeBlock.AllowConditionalAssignment==false )
                         {
                             SetError(Error.ConditionalAssignment);
                             return (Abort);
@@ -1816,6 +1814,10 @@ namespace MteEval
             // reset expressions
             exprParam = "";
             exprEval = "";
+
+            // iif() counter
+            iifCount = 0;
+
 
         }
 
