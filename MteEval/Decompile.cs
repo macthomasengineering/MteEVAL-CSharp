@@ -446,7 +446,7 @@ namespace MteEval
         }
 
 
-        //------------------------------------------------------------------------ pad()
+        //------------------------------------------------------------------------ Pad()
         //
         private static string Pad(int ip, string instruct, string operands)
         {
