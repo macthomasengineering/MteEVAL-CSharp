@@ -45,7 +45,6 @@ namespace MteEval
     //
     class Codeblock
     {
-
         public Code code;
         public string codeblockText;
         public Error LastError { get; set; }

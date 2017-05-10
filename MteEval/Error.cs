@@ -45,7 +45,6 @@ namespace MteEval
     //
     public class Error
     {
-
         public static readonly Error None = new Error(0, "None");
         public static readonly Error Syntax = new Error(1, "Syntax Error");
         public static readonly Error MissingBracket = new Error(2, "{} bracket not found");
