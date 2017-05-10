@@ -62,6 +62,7 @@
 '*
 '* No.        Who  Date        Description
 '* =====      ===  ==========  ==================================================
+'* 1.09       MTE  2017/05/10  - Added test app to project.  Misc edits.
 '* 1.08       MTE  2017/05/09  - Fixed errors in bitwise vs logical operator 
 '*                               regular expresions.
 '* 1.07       MTE  2017/05/08  - Now detects illegal assignment aka "no lvalue"
@@ -73,9 +74,9 @@
 
 namespace MteEval
 {
-    static class VersionInfo
+    public static class VersionInfo
     {
-        private const string versionText="1.08.1";
+        private const string versionText="1.09";
         static public string Text
         {
             get { return versionText; }

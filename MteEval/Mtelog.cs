@@ -52,7 +52,7 @@ namespace MteUtility
     
     //------------------------------------------------------------------------ Mtelog()
     //
-    static class Mtelog
+    public static class Mtelog
     {
         private static string logFileName = "mtelog.txt";
         private static long logMaxSize = 1024 * 1024;
@@ -62,6 +62,8 @@ namespace MteUtility
         private static bool debugTypeEnabled = true;
         public static bool started = false;
         private static StreamWriter logStream = null;
+        public static string LogDirectory {get {return logDirectory;}}
+
 
         //------------------------------------------------------------------- DebugOn()
         //
@@ -247,8 +249,6 @@ namespace MteUtility
         //
         private static void WriteLogEntry( string logType, string logMessage )
         {
-            const int CRLF_Length = 2;
-
             // Reset on max log size
             if ( logSize > logMaxSize)
             {
@@ -270,7 +270,7 @@ namespace MteUtility
             {
                 logStream.WriteLine(logEntry.ToString());
                 logStream.Flush();
-                logSize = logSize + logEntry.Length + CRLF_Length;
+                logSize = logSize + logEntry.Length + CRLF.Length;
             }
             catch (Exception ex)
             {
@@ -280,5 +280,11 @@ namespace MteUtility
         }
 
     }
+
+    public static class CRLF
+    {
+        public static int Length = 2;
+    }
+
 }
 

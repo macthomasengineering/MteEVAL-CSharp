@@ -40,10 +40,9 @@ using System.Collections.Generic;
 
 namespace MteEval
 {
-
     //--------------------------------------------------------------------- Codeblock()
     //
-    class Codeblock
+    public class Codeblock
     {
         public Code code;
         public string codeblockText;
@@ -61,6 +60,8 @@ namespace MteEval
             ErrDetail = "";
             OptimizerEnabled = true;
             AllowConditionalAssignment = false;
+            
+            // Debug
             // if (!Mtelog.started) Mtelog.Start();
         }
 
@@ -92,7 +93,8 @@ namespace MteEval
         {
             List<string> codelist;
 
-            codelist = MteEval.Decompile.Dump(this);
+            // Decompile compiled code to list
+            codelist = MteEval.Decompile.DumpCodeblock(this);
             
             return (codelist);
         }
@@ -106,7 +108,7 @@ namespace MteEval
             double result = 0d;
 
             // Execute code
-            result = Run.Execute(this, args);
+            result = Run.ExecuteCodeblock(this, args);
 
             return (result);
         }

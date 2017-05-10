@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MteEVAL")]
-[assembly: AssemblyDescription("Simple C# Expression Compiler and Eval library")]
+[assembly: AssemblyTitle("MteEvalTestLib")]
+[assembly: AssemblyDescription("MteEval test cases.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MacThomas Engineering")]
-[assembly: AssemblyProduct("MteEVAL")]
+[assembly: AssemblyProduct("MteEvalTestLib")]
 [assembly: AssemblyCopyright("Copyright ©  2016-2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d864de47-0a43-445e-8f2a-71be88800919")]
+[assembly: Guid("ae7afd93-fb83-43d3-b4b7-09d58cb00adf")]
 
 // Version information for an assembly consists of the following four values:
 //

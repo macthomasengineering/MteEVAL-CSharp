@@ -40,7 +40,7 @@ namespace MteEval
 {
     //-------------------------------------------------------------------------- Code()
     //
-    class Code
+    public class Code
     {
         private string codeblockText;
         public string CodeBlockText {get { return codeblockText; }}

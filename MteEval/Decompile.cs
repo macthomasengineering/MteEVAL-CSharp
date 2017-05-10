@@ -44,14 +44,14 @@ namespace MteEval
 {
     //--------------------------------------------------------------------- Decompile()
     //
-    static class Decompile
+    public static class Decompile
     {
         private const int CodeHeaderParameterCount = 0;
         private const int CodeStartsHere = 1;
 
         //---------------------------------------------------------------------- Dump()
         //
-        public static List<string> Dump(Codeblock cb)
+        public static List<string> DumpCodeblock(Codeblock cb)
         {
 
             var decode = new List<string>();

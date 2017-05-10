@@ -53,7 +53,7 @@ namespace MteEval
 
         //-------------------------------------------------------------------- Execute()
         //
-        public static double Execute(Codeblock cb, double[] args)
+        public static double ExecuteCodeblock(Codeblock cb, double[] args)
         {
             double result = 0;
 
