@@ -50,7 +50,7 @@ double commission2 = cb.Eval( 186100, .08, .07 );    // commission2=20915
 double commission3 = cb.Eval( 320000, .08, .05 );    // commission3=36600
 ```
 
-Example 4: Codeblock decompile without optimization 
+Example 4: Codeblock decompile with optimization disabled
 
 ```cs
 Codeblock cb = new Codeblock();
