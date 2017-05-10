@@ -62,7 +62,7 @@
 '*
 '* No.        Who  Date        Description
 '* =====      ===  ==========  ==================================================
-'* 1.08       MTE  2017/05/09  - Fixed errors it bitwise vs logical operator 
+'* 1.08       MTE  2017/05/09  - Fixed errors in bitwise vs logical operator 
 '*                               regular expresions.
 '* 1.07       MTE  2017/05/08  - Now detects illegal assignment aka "no lvalue"
 '* 1.06       MTE  2017/05/08  - Completed library port to C#
