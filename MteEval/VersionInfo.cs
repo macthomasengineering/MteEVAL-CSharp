@@ -45,7 +45,6 @@
 ' Codegen.cs
 ' ----------
 ' - Use dictionary for variable/parameter names
-' - Add fixes in 1.07
 ' - Replace iif() with conditional operator.
 ' - Replace double with decimal
 ' - Add test that token was consumed. Catches errors in parser.

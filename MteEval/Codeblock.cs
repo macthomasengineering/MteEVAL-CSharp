@@ -93,7 +93,7 @@ namespace MteEval
         {
             List<string> codelist;
 
-            // Decompile compiled code to list
+            // Decompile code to list
             codelist = MteEval.Decompile.DumpCodeblock(this);
             
             return (codelist);

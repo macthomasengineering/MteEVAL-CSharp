@@ -49,6 +49,84 @@ double commission1 = cb.Eval( 152000, .08, .05 );    // commission1=14760
 double commission2 = cb.Eval( 186100, .08, .07 );    // commission2=20915
 double commission3 = cb.Eval( 320000, .08, .05 );    // commission3=36600
 ```
+
+Example 4: Codeblock decompile without optimization 
+
+```cs
+Codeblock cb = new Codeblock();
+cb.OptimizerEnabled = false;                       
+cb.Compile("{|sales,r1,r2| r1*sales + iif( sales > 100000, (sales-100000)*r2, 0 ) }");
+List<string> codelist = Decompile.DumpCodeblock(cb);
+foreach (var item in codelist)  Console.Writeline(item);
+```
+```
+-- Header --
+Parameters=3
+-- Code --
+1:     loadv   ax, varmem[1]
+3:     push    ax
+4:     loadv   ax, varmem[0]
+6:     mul     stack[sp] * ax
+6:     pop     
+7:     push    ax
+8:     loadv   ax, varmem[0]
+10:    push    ax
+11:    loadc   ax, 100000
+13:    gt      stack[sp] > ax
+13:    pop     
+14:    jumpf   28
+16:    loadv   ax, varmem[0]
+18:    push    ax
+19:    loadc   ax, 100000
+21:    sub     stack[sp] - ax
+21:    pop     
+22:    push    ax
+23:    loadv   ax, varmem[2]
+25:    mul     stack[sp] * ax
+25:    pop     
+26:    jump    30
+28:    loadc   ax, 0
+30:    add     stack[sp] + ax
+30:    pop     
+31:    end     
+```
+Example 5: Codeblock decompile with peephole optimization 
+
+```cs
+Codeblock cb = new Codeblock();
+cb.Compile("{|sales,r1,r2| r1*sales + iif( sales > 100000, (sales-100000)*r2, 0 ) }");
+List<string> codelist = Decompile.DumpCodeblock(cb);
+foreach (var item in codelist)  Console.Writeline(item);
+```
+```
+-- Header --
+Parameters=3
+-- Code --
+1:     pushv   varmem[1]
+3:     loadv   ax, varmem[0]
+5:     mul     stack[sp] * ax
+5:     pop     
+6:     push    ax
+7:     pushv   varmem[0]
+9:     loadc   ax, 100000
+11:    gt      stack[sp] > ax
+11:    pop     
+12:    jumpf   25
+14:    pushv   varmem[0]
+16:    loadc   ax, 100000
+18:    sub     stack[sp] - ax
+18:    pop     
+19:    push    ax
+20:    loadv   ax, varmem[2]
+22:    mul     stack[sp] * ax
+22:    pop     
+23:    jump    27
+25:    loadc   ax, 0
+27:    add     stack[sp] + ax
+27:    pop     
+28:    end     
+```
+   *The optimizer reduced the code size from 31 to 28.*
 ## Operator support
 
 The library supports C/Java style operators along side a growing list of C# and B4X compatible methods.

@@ -212,7 +212,7 @@ namespace MteEval
 
                     case Pcode.Divide:
 
-                        // Check for devide by zero
+                        // Check for divide by zero
                         if (ax == 0d)
                         {
                             DivideByZeroError(ip, ax, sp);
