@@ -51,9 +51,10 @@ double commission3 = cb.Eval( 320000, .08, .05 );    // commission3=36600
 ```
 ## Operator support
 
-The library supports C/Java style operators along side a growing list of internal functions.
+The library supports C/Java style operators along side a growing list of C# and B4X compatible methods.
 
 * Math operators: +-*/%
+* Math constants: cpi, ce 
 * Relational: > < >= <= != ==
 * Logical: || && !
 * Bitwise: << >> & ^ |
