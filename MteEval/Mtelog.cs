@@ -54,7 +54,6 @@ namespace MteUtility
     //
     static class Mtelog
     {
-
         private static string logFileName = "mtelog.txt";
         private static long logMaxSize = 1024 * 1024;
         private static long logSize = 0;
@@ -248,7 +247,7 @@ namespace MteUtility
         //
         private static void WriteLogEntry( string logType, string logMessage )
         {
-            const int CRLF_LENGTH = 2;
+            const int CRLF_Length = 2;
 
             // Reset on max log size
             if ( logSize > logMaxSize)
@@ -271,8 +270,8 @@ namespace MteUtility
             {
                 logStream.WriteLine(logEntry.ToString());
                 logStream.Flush();
-                logSize = logSize + logEntry.Length + CRLF_LENGTH;    
-            }
+                logSize = logSize + logEntry.Length + CRLF_Length;
+                
             catch (Exception ex)
             {
                 System.Console.WriteLine("Error: Writing log entry. ex=" + ex.Message);
