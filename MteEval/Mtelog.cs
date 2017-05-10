@@ -271,7 +271,7 @@ namespace MteUtility
                 logStream.WriteLine(logEntry.ToString());
                 logStream.Flush();
                 logSize = logSize + logEntry.Length + CRLF_Length;
-                
+            }
             catch (Exception ex)
             {
                 System.Console.WriteLine("Error: Writing log entry. ex=" + ex.Message);
