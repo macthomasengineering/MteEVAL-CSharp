@@ -4,7 +4,7 @@ MteEVAL is a library for compiling and evaluating expressions at runtime. Expres
 
 There are five editions of the library: C# (.NET), Android (B4A), iOS (B4i), Java (B4J), JavaS2 (B4A/B4J).
 
-   *This repository is for our stage 2 performance edition of the library in native C#.*
+   *This repository is for our .NET edition of the library in native C#.*
 
 See [Anywhere Software](https://www.idevaffiliate.com/33168/16-0-3-1.html) to learn more about B4A, B4i, and B4J cross-platform development tools.
 
@@ -19,6 +19,18 @@ MteEVAL implements the expression compiler through the class Codeblock. MteEVAL'
 ```clipper
 {|<parameters>|<expression>}
 ```
+## Operator support
+
+The library supports C/Java style operators along side a growing list of C# and B4X compatible methods.
+
+* Math operators: +-*/%
+* Math constants: cpi, ce 
+* Relational: > < >= <= != ==
+* Logical: || && !
+* Bitwise: << >> & ^ |
+* Assignment: =
+* Functions: abs(), ceil(), floor(), iif(), if(), min(), max(), sqrt(), power(), round()
+* Trig Functions: acos(), acosd(), asin(), asind(), atan(), atand(), cos(), cosd(), sin(), sind(), tan(), tand()
 
 ## Examples
 
@@ -127,19 +139,6 @@ Parameters=3
 28:    end     
 ```
    *The optimizer reduced the code size from 31 to 28.*
-## Operator support
-
-The library supports C/Java style operators along side a growing list of C# and B4X compatible methods.
-
-* Math operators: +-*/%
-* Math constants: cpi, ce 
-* Relational: > < >= <= != ==
-* Logical: || && !
-* Bitwise: << >> & ^ |
-* Assignment: =
-* Functions: abs(), ceil(), floor(), iif(), if(), min(), max(), sqrt(), power(), round()
-* Trig Functions: acos(), acosd(), asin(), asind(), atan(), atand(), cos(), cosd(), sin(), sind(), tan(), tand()
-
 ## Linking to your project
 
 * ToDo
