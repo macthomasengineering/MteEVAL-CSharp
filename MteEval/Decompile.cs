@@ -46,7 +46,6 @@ namespace MteEval
     //
     static class Decompile
     {
-
         private const int CodeHeaderParameterCount = 0;
         private const int CodeStartsHere = 1;
 
