@@ -61,6 +61,8 @@
 '*
 '* No.        Who  Date        Description
 '* =====      ===  ==========  ==================================================
+'* 1.09.2     MTE  2017/05/10  - Fixed Codeblock.Decompile() method signature
+'* 1.09.1     MTE  2017/05/10  - Updated Readme.md
 '* 1.09       MTE  2017/05/10  - Added test app to project.  Misc edits.
 '* 1.08       MTE  2017/05/09  - Fixed errors in bitwise vs logical operator 
 '*                               regular expresions.

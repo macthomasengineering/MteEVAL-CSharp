@@ -89,7 +89,7 @@ namespace MteEval
         //
         // Decompile a Codeblock 
         //
-        public List<string> Decompile(string codeblockText)
+        public List<string> Decompile()
         {
             List<string> codelist;
 

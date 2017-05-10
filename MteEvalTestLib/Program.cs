@@ -187,7 +187,7 @@ namespace MteEvalTestLib
             if (decompile)
             {
                 // Decompile code
-                List<string> codelist = Decompile.DumpCodeblock(cb);
+                List<string> codelist = cb.Decompile();
 
                 // Output code listing    
                 foreach (var item in codelist)

@@ -56,7 +56,7 @@ Example 4: Codeblock decompile with optimization disabled
 Codeblock cb = new Codeblock();
 cb.OptimizerEnabled = false;                       
 cb.Compile("{|sales,r1,r2| r1*sales + iif( sales > 100000, (sales-100000)*r2, 0 ) }");
-List<string> codelist = Decompile.DumpCodeblock(cb);
+List<string> codelist = cb.Decompile();
 foreach (var item in codelist)  Console.Writeline(item);
 ```
 ```
@@ -95,7 +95,7 @@ Example 5: Codeblock decompile with peephole optimization
 ```cs
 Codeblock cb = new Codeblock();
 cb.Compile("{|sales,r1,r2| r1*sales + iif( sales > 100000, (sales-100000)*r2, 0 ) }");
-List<string> codelist = Decompile.DumpCodeblock(cb);
+List<string> codelist = cb.Decompile();
 foreach (var item in codelist)  Console.Writeline(item);
 ```
 ```
