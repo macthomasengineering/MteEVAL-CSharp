@@ -58,8 +58,9 @@ namespace MteEval
             var decode = new List<string>();
 
             // If no code then return here
-            if (cb.code.ByteCode.Length == 0)
+            if (cb.code.ByteCode == null)
             {
+                decode.Add("Error: No code");
                 return (decode);
             }
 

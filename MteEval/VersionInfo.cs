@@ -75,7 +75,7 @@ namespace MteEval
 {
     static class VersionInfo
     {
-        private const string versionText="1.08";
+        private const string versionText="1.08.1";
         static public string Text
         {
             get { return versionText; }

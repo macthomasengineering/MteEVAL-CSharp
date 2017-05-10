@@ -45,7 +45,6 @@ using System.Text.RegularExpressions;
 
 namespace MteEval
 {
-
     //----------------------------------------------------------------------- Codegen()
     //
     class Codegen
@@ -924,7 +923,6 @@ namespace MteEval
 
             switch (token.type)
             {
-
                 case TokenType.Identifier:
 
                     // Find internal function
@@ -950,7 +948,6 @@ namespace MteEval
                             if (success == Abort) return (Abort);
                         }
                     }
-
                     // Either built-in constant or parameter
                     else
                     {
@@ -1019,13 +1016,13 @@ namespace MteEval
 
                     // Get next token
                     GetToken();
-
                     break;
+
                 default:
+
                     SyntaxError(Error.Other);
                     return (Abort);
             }
-
             return (Success);
         }
 
