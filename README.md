@@ -2,11 +2,17 @@
 
 MteEVAL is a library for compiling and evaluating expressions at runtime. Expressions are converted to bytecode and then executed on demand with a simple virtual machine.
 
-There are five editions of the library: C# (.NET), Android (B4A), iOS (B4i), Java (B4J), JavaS2 (B4A/B4J).
+There are five editions of the library:
+
+* .NET (C#)
+* Android (B4A)
+* iOS (B4i)
+* Java (B4J)
+* JavaS2(B4A/B4J)
 
    *This repository is for our .NET edition of the library in native C#.*
 
-See [Anywhere Software](https://www.idevaffiliate.com/33168/16-0-3-1.html) to learn more about B4A, B4i, and B4J cross-platform development tools.
+See [Anywhere Software](https://www.b4x.com) to learn more about B4A, B4i, and B4J cross-platform development tools.
 
 ## Application
 
@@ -34,7 +40,7 @@ The library supports C/Java style operators along side a growing list of C# and 
 
 ## Examples
 
-You only need to compile a Codeblock once.  Once compiled you can evaluate it as many times as needed, all while supplying different arguments. 
+You only need to compile a Codeblock once.  Once compiled you can evaluate it as many times as needed, all while supplying different arguments. All arguments and the return values are type *double.*
 
 Example 1: Codeblock without parameters
 
@@ -62,7 +68,7 @@ double commission2 = cb.Eval( 186100, .08, .07 );    // commission2=20915
 double commission3 = cb.Eval( 320000, .08, .05 );    // commission3=36600
 ```
 
-Example 4: Codeblock decompile with optimization disabled
+Example 4: Codeblock with optimization disabled
 
 ```cs
 Codeblock cb = new Codeblock();
@@ -102,7 +108,7 @@ Parameters=3
 30:    pop     
 31:    end     
 ```
-Example 5: Codeblock decompile with peephole optimization 
+Example 5: Codeblock with peephole optimization (enabled by default)
 
 ```cs
 Codeblock cb = new Codeblock();

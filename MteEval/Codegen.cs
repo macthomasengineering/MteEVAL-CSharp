@@ -288,7 +288,7 @@ namespace MteEval
             // Reset parameter count
             parameterCount = 0;
 
-            // Tokenize parameter experssion
+            // Tokenize parameter expression
             tokenList = TokenizeExpr(exprParam);
 
             // Build table of parameter names
